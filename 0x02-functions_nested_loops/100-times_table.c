@@ -12,9 +12,9 @@ int i, j;
 
 if ((n >= 0) || (n <= 15))
 {
-	for (i = n; i <= 9; i++)
+	for (i = 0; i <= n; i++)
 	{
-		for (j = n; j <= 9; j++)
+		for (j = 0; j <= n; j++)
 		{
 			n = i * j;
 			if (j == 0)
