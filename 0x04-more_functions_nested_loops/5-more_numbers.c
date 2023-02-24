@@ -6,21 +6,26 @@
 */
 void more_numbers(void)
 {
-int number1, number2;
+	int lines, numbers;
 
-for (number1 = 0; number1 < 10; number1++)
-{
-for (number2 = 0; number2 <= 14; number2++)
-
-{
-if (number2 > 9)
-{
-_putchar((number2 / 10) + '0');
-}
-_putchar((number2 % 10) + '0');
-}
-_putchar(10);
-}
+	/* Set loop for line number */
+	for (lines = 0; lines < 10; lines++)
+	{
+		/* Set a loop to print 1 to 14 */
+		for (numbers = 0; numbers <= 14; numbers++)
+		{
+			/* Set condition for numbers from 10 upwards */
+			if (numbers > 9)
+			{
+				/* This expression prints the tens */
+				_putchar((numbers / 10) + '0');
+			}
+			/* This expression prints the units */
+			_putchar((numbers % 10) + '0');
+		}
+		/* This one prints a new line */
+		_putchar(10);
+	}
 }
 
 
