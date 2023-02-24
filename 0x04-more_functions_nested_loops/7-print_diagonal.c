@@ -6,30 +6,27 @@
  */
 void print_diagonal(int n)
 {
+	int slant_lines;
+	int spaces;
 
-int i;
-int b;
-
-if (n > 0)
-{
-for (i = 0; i < n; i++)
-{
-for (b = 0; b < i; b++)
-{
-_putchar (' ');
-}
-_putchar (92);
-_putchar ('\n');
-
-}
-
-}
-
-
-else
-{
-_putchar ('\n');
-}
-
+	/* Check if n is greater than 0 */
+	if (n > 0)
+	{	/* Loops to print slant lines */
+		for (slant_lines = 0; slant_lines < n; slant_lines++)
+		{
+			/* Loop for spaces offset */
+			for (spaces = 0; space < slant_lines; spaces++)
+			{
+				_putchar (' ');
+			}
+			_putchar (92);
+			_putchar ('\n');
+		}
+	}
+	/* If n is not greater than 0 just print a new line */
+	else
+	{
+	_putchar ('\n');
+	}
 }
 
