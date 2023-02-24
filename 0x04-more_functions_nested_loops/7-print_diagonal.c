@@ -15,7 +15,7 @@ void print_diagonal(int n)
 		for (slant_lines = 0; slant_lines < n; slant_lines++)
 		{
 			/* Loop for spaces offset */
-			for (spaces = 0; space < slant_lines; spaces++)
+			for (spaces = 0; spaces < slant_lines; spaces++)
 			{
 				_putchar (' ');
 			}
