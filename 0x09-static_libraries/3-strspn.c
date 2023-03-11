@@ -1,24 +1,35 @@
 #include "main.h"
+
 /**
- * _strspn - prints the consecutive caracters of s1 that are in s2.
- * @s: source string
- * @accept: searching string
+ * _strspn - search a sring for a set of bytes (substrings)
+ * @s: character array
+ * @accept: character array to check bytes from
  *
- * Return: new string.
+ * Return: Number of bytes in the initial segement of 's'
  */
 unsigned int _strspn(char *s, char *accept)
 {
-	unsigned int i, j;
+	int i;
+	int j;
+	int a;
 
-	for (j = 0; *(s + j); j++)
+	i = 0;
+	a = 0;
+	while (s[i]  != '\0')
 	{
-		for (i = 0; *(accept + i); i++)
+		j = 0;
+		while (accept[j] != '\0')
 		{
-			if (*(s + j) == *(accept + i))
+			if (s[i] == accept[j])
+			{
+				a++;
 				break;
+			}
+			j++;
 		}
-	if (*(accept + i) == '\0')
-		break;
+		if (accept[j] == '\0')
+			break;
+		i++;
 	}
-	return (j);
+	return (a);
 }

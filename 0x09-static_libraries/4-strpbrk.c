@@ -1,29 +1,32 @@
 #include "main.h"
-#include <stdio.h>
+
 /**
- * _strpbrk - prints the consecutive caracters of s1 that are in s2.
- * @s: source string
- * @accept: searching string
- *
- * Return: new string.
+ * _strpbrk - Search a string for a set of bytes.
+ * @s: string to search
+ * @accept: string to macth
+ * Return: Pointer to the byte in 's' that macthes
+ * one of the bytes in "accept". Or NULL if no
+ * such byte is found.
  */
 char *_strpbrk(char *s, char *accept)
 {
-	unsigned int i, j;
+	int i, j;
+	char *p;
 
-	for (i = 0; *(s + i); i++)
+	i = 0;
+	while (s[i] != '\0')
 	{
-		for (j = 0; *(accept + j); j++)
+		j = 0;
+		while (accept[j] != '\0')
 		{
-			if (*(s + i) == *(accept + j))
+			if (accept[j] == s[i])
 			{
-				break;
+				p = &s[i];
+				return (p);
 			}
+			j++;
 		}
-		if (*(accept + j) != '\0')
-		{
-			return (s + i);
-		}
+		i++;
 	}
 	return (0);
 }

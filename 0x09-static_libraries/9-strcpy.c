@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- * _strcpy - Copiar el contenido de uno a otra variable
- * @dest: This is destiny
- * @src: This is the copia
+ * _strcpy - Copy ine string to  another variable
+ * @dest: This is destination
+ * @src: This is where to copy from
  *
  * Return: This return copy
  */
