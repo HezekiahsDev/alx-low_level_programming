@@ -1,4 +1,4 @@
-include <stdlib.h>
+#include <stdlib.h>
 /**
   * malloc_checked - allocates memory using malloc.
   * @b: size of memory to be allocated.
@@ -7,10 +7,10 @@ include <stdlib.h>
   */
 void *malloc_checked(unsigned int b)
 {
-	void *ptr = malloc(b);
+	void *p = malloc(b);
 
-	if (ptr == NULL)
+	if (p == NULL)
 		exit(98);
 
-	return (ptr);
+	return (p);
 }
