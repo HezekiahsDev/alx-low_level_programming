@@ -1,83 +1,70 @@
 #include "3-calc.h"
-
 /**
- * op_add - return the sum of 2 integers
- * @a: integer
- * @b: integer
- *
- * Return: sum of a and b
- */
+  *op_add - return the sum of 2 numbers.
+  *@a: integer.
+  *@b: integer.
+  *
+  *Return: sum.
+  */
 int op_add(int a, int b)
 {
-	int sum = a + b;
-
-	return (sum);
+	return (a + b);
 }
 
 /**
- * op_sub - calculate the difference between two numbers
- * @a: integer
- * @b: integer
- *
- * Return: difference
- */
+  *op_sub - returns difference of 2 numbers
+  *@a:  integer.
+  *@b: integer.
+  *
+  *Return: difference.
+  */
 int op_sub(int a, int b)
 {
-	int sub = a -  b;
-
-	return (sub);
+	return (a - b);
 }
 
 /**
- * op_mul - multiply two numbers
- * @a: integer
- * @b: integer
- *
- * Return: product of a and b
- */
+  *op_mul - returns product of two numbers.
+  *@a: integer.
+  *@b: integer.
+  *
+  *Return: product.
+  */
 int op_mul(int a, int b)
 {
-	int product = a * b;
-
-	return (product);
+	return (a * b);
 }
 
 /**
- * op_div - calculate the quotient of two numbers.
- * @a: integer
- * @b: integer
- *
- * Return: quotient
- */
+  *op_div - returns the quotient of 2 numbers.
+  *@a: integer.
+  *@b: integer.
+  *
+  *Return: quotient.
+  */
 int op_div(int a, int b)
 {
-	int quo;
-
 	if (b == 0)
 	{
 		printf("Error\n");
 		exit(100);
 	}
-	quo = a / b;
-	return (quo);
+	return (a / b);
 }
 
 /**
- * op_mod - find the remainder of quotients
- * @a: integer
- * @b: integer
- *
- * Return: remainder of quotients
- */
+  *op_mod - returns the remainder of division.
+  *@a: integer.
+  *@b: integer.
+  *
+  *Return: remainder.
+  */
 int op_mod(int a, int b)
 {
-	int quo;
-
 	if (b == 0)
 	{
 		printf("Error\n");
 		exit(100);
 	}
-	quo = a % b;
-	return (quo);
+	return (a % b);
 }
