@@ -13,7 +13,7 @@ void print_numbers(const char *seperator, const unsigned int n, ...)
 	unsigned int i;
 	va_list numbers;
 
-	va_start(numbers, n)
+	va_start(numbers, n);
 
 	for (i = 0; i < n; i++)
 	{
