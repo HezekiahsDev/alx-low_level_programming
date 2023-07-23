@@ -25,7 +25,7 @@ int pls_check(int i, int len, char *s)
 	{
 		if (s[i] == s[len])
 		{
-				return (pls_check(i + 1, len - 1, s));
+			return (pls_check(i + 1, len - 1, s));
 		}
 		else if (s[i] != s[len])
 		{
