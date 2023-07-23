@@ -9,11 +9,11 @@ int _lenght(char *str)
 	/* test base case */
 	if (*str == '\0')
 		return (0);
-	return (1 + _lenght(str + 1));
+	return (1 + _lenght_of_string(str + 1));
 }
 
 /**
- *pls_ check - confirm palindrome
+ *pls_check - confirm palindrome
  * @i: count
  * @len: lenght
  * @s: word
@@ -49,5 +49,5 @@ int pls_check(int i, int len, char *s)
 **/
 int is_palindrome(char *s)
 {
-	return (pls_check(0, _lenght(s) - 1, s));
+	return (pls_check(0, _lenght_of_string(s) - 1, s));
 }
