@@ -4,7 +4,7 @@
   * @str: input
   * Return: strlen
 **/
-int _lenght(char *str)
+int _lenght_of_string(char *str)
 {
 	/* test base case */
 	if (*str == '\0')
