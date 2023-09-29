@@ -6,7 +6,7 @@
  *
  * Return: 1 - true, 0 - false
  */
-int primeHelp(int num_in, int pr)
+int confirm(int num_in, int pr)
 {
 	if (pr < num_in)
 	{
