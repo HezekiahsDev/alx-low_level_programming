@@ -33,12 +33,10 @@ char *str_concat(char *s1, char *s2)
 	/*check malloc status*/
 	if (cat == NULL)
 		return (NULL);
-	
-	i = 0;
-	while (i < slen_1)
+
+	for (i = 0; i < slen_1; i++)
 	{
 		cat[i] = s1[i];
-		i++;
 	}
 	j = 0;
 	while (i <= catsize)

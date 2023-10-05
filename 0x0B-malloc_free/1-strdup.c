@@ -33,11 +33,9 @@ char *_strdup(char *str)
 		return (NULL);
 	}
 
-	i = 0;
-	while (i < slen)
+	for (i = 0; i < slen; i++)
 	{
 		dup[i] = str[i];
-		i++;
 	}
 	dup[slen] = '\0';
 	return (dup);

@@ -1,10 +1,11 @@
 #include "main.h"
 #include <stdlib.h>
 /**
-  *create_array - initialize a new array
+  *create_array - initialize a new array of character
+  *with a specific character
   *@size: array size
-  *@c: init char
-  *Return: pointer to the array memory
+  *@c: initialize with
+  *Return: pointer to the array block of memory
   *or NULL on failure
   */
 char *create_array(unsigned int size, char c)
@@ -24,12 +25,11 @@ char *create_array(unsigned int size, char c)
 	if (array == NULL)
 		return (NULL);
 
-	i = 0;
-	while (i < size)
+	for (i = 0; i < size; i++)
 	{
 		array[i] = c;
-		i++;
 	}
+
 	return (array);
 
 }

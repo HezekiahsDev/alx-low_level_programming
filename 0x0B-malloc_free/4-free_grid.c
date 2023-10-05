@@ -1,20 +1,21 @@
 #include "main.h"
 #include <stdlib.h>
 /**
-  * free_grid - free mem alloced to grid
-  * @grid: ptr to grid address
-  * @height: array height
+  * free_grid - free grid
+  * @grid: pointer to grid address
+  * @height: array (grid) height
   *
-  * Return: nothing
+  * Return: void.
   */
 void free_grid(int **grid, int height)
 {
-	int i;
+	int index;
 
-	i = 0;
-	for (i = 0; i < height; i++)
+	index = 0;
+	while (index < height)
 	{
-		free(grid[i]);
+		free(grid[index]);
+		index++;
 	}
 	free(grid);
 }

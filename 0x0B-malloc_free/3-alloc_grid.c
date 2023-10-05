@@ -2,9 +2,10 @@
 #include <stdlib.h>
 /**
  * alloc_grid - allocate memory for a newly created grid
- * @width: grid width
- * @height: grid height
- * Return: ptr to mem address of grid
+ * @width: array (grid) width
+ * @height: array (grid) height
+ * Return: return thr pointer to the memory address of the grid
+ * or NULL if it does not exist
  */
 int **alloc_grid(int width, int height)
 {
@@ -18,9 +19,10 @@ int **alloc_grid(int width, int height)
 	}
 	else
 	{
-		/*grid malloc*/
+		/* allocate memory for grid */
 		grid = (int **) malloc(height * sizeof(int *));
-		/* ptrs malloc*/
+		/* allocate memory for each pointer */
+		/* and free if not pointer */
 		if (!grid)
 		{
 			free(grid);
@@ -37,16 +39,12 @@ int **alloc_grid(int width, int height)
 				return (NULL);
 			}
 		}
-
-		a = 0;
-		while (a < height)
+		for (a = 0; a < height; a++)
 		{
-			b = 0;
-			while (b < width)
+			for (b = 0; b < width; b++)
 			{
 				grid[a][b] = 0;
-				b++;
-			a++;
+			}
 		}
 		return (grid);
 	}
