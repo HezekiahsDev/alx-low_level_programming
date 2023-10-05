@@ -1,2 +1,4 @@
-dynamic memory allocation in C.
-Make us allocate and access memory easily
+malloc and free
+vagrind
+realloc
+calloc
