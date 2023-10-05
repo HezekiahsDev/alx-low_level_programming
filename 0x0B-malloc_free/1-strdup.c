@@ -34,7 +34,7 @@ char *_strdup(char *str)
 	}
 
 	i = 0;
-	while(i < slen)
+	while (i < slen)
 	{
 		dup[i] = str[i];
 		i++;
