@@ -1,21 +1,20 @@
 #include "lists.h"
 
 /**
- * listint_len - mumber the nodes in a SL list
- * @h: begining of list (head  of node)
- *
- * Return: list length
+ * listint_len - node lenght
+ * @h: node head
+ * Return: the number of elements
  */
 size_t listint_len(const listint_t *h)
 {
-	const listint_t *flag = h;
-	size_t lst_len = 0;
+	const listint_t *ndx = h;
+	size_t cnt = 0;
 
-	while (flag != NULL)
+	while (ndx != NULL)
 	{
-		lst_len += 1;
-		lst_len = flag->next;
+		cnt += 1;
+		ndx = ndx->next;
 	}
-	return (lst_len);
+	return (cnt);
 }
 

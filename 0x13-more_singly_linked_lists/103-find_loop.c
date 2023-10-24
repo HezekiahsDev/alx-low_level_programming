@@ -1,36 +1,36 @@
 #include "lists.h"
 /**
- * find_listint_loop - search for loops in a SLL
- * @head : head node
- * Return: start of loop
+ * find_listint_loop - find
+ * @head : node head
+ * Return: found
  */
 listint_t *find_listint_loop(listint_t *head)
 {
-listint_t *a, *b;
+listint_t *n1, *n2;
 
 if (head == NULL || head->next == NULL)
 return (NULL);
 
-a = head->next;
-b = (head->next)->next;
+n1 = head->next;
+n2 = (head->next)->next;
 
-while (b)
+while (n2)
 {
-if (a == b)
+if (n1 == n2)
 {
-a = head;
+n1 = head;
 
-while (a  != b)
+while (n1 != n2)
 {
-a = a->next;
-b = b->next;
+n1 = n1->next;
+n2 = n2->next;
 }
 
-return (a);
+return (n1);
 }
 
-a = a->next;
-b = (b->next)->next;
+n1 = n1->next;
+n2 = (n2->next)->next;
 }
 
 return (NULL);

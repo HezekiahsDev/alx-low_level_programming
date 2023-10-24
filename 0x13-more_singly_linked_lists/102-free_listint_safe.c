@@ -1,72 +1,70 @@
 #include "lists.h"
 
 /**
- * free_listptr2 - free SL list
- * @head: head nide
- *
+ * free_listp2 - free a list
+ * @head: node head
  * Return: nothing
  */
-void free_listptr2(listptr_t **head)
+void free_listp2(listp_t **head)
 {
-	listptr_t *hold;
-	listptr_t *list;
+	listp_t *tmpt;
+	listp_t *node;
 
 	if (head != NULL)
 	{
-		list = *head;
-		while ((hold = list) != NULL)
+		node = *head;
+		while ((tmpt = node) != NULL)
 		{
-			list = list->next;
-			free(hold);
+			node = node->next;
+			free(tmpt);
 		}
 		*head = NULL;
 	}
 }
 
 /**
- * free_listint_safe - free SL list
- * @h: head node
- *
- * Return: no of byte freed
+ * free_listint_safe - safe free list
+ * @h: node head
+ * Return: free byte
  */
 size_t free_listint_safe(listint_t **h)
 {
-	size_t indx = 0;
-	listp_t *headp *fresh, *itrte;
-	listint_t *listt;
+	size_t node_block = 0;
+	listp_t *ptr_head, *new, *append;
+	listint_t *node;
 
-	headp = NULL;
+	ptr_head = NULL;
 	while (*h != NULL)
 	{
-		fresh = malloc(sizeof(listptr_t));
+		new = malloc(sizeof(listp_t));
 
-		if (fresh == NULL)
+		if (new == NULL)
 			exit(98);
 
-		fresh->ptr = (void *)*h;
-		fresh->next = headp;
-		headp = fresh;
+		new->p = (void *)*h;
+		new->next = ptr_head;
+		ptr_head = new;
 
-		itrte = headp;
+		append = ptr_head;
 
-		while (itrte->next != NULL)
+		while (append->next != NULL)
 		{
-			itrte = itrte->next;
-			if (*h == itrte->ptr)
+			append = append->next;
+			if (*h == append->p)
 			{
 				*h = NULL;
-				free_listptr2(&headp);
-				return (indx);
+				free_listp2(&ptr_head);
+				return (node_block);
 			}
 		}
 
-		listt = *h;
+		node = *h;
 		*h = (*h)->next;
-		free(listt);
-		indx++;
+		free(node);
+		node_block++;
 	}
 
 	*h = NULL;
-	free_listptr2(&headp);
-	return (indx);
+	free_listp2(&ptr_head);
+	return (node_block);
 }

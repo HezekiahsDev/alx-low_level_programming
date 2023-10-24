@@ -1,21 +1,20 @@
 #include <stdio.h>
 #include "lists.h"
 /**
- * sum_listint - sum up the data in a SL list
- * @head : head node
- * Return: sum of data
- * or 0 if error occurs (empty list)
+ * sum_listint - add uo all the node
+ * @head : node head
+ * Return: result
  */
 int sum_listint(listint_t *head)
 {
-int sum;
+int sum_up;
 
-sum = 0;
+sum_up = 0;
 
 while (head)
 {
-sum += head->n;
+sum_up += head->n;
 head = head->next;
 }
-return (sum);
+return (sum_up);
 }

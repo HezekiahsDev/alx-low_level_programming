@@ -1,27 +1,26 @@
 #include "lists.h"
 
 /**
- * reverse_listint - reverse SL list
- * @head: head node
- *
- * Return: first element
+ * reverse_listint - reverse a list
+ * @head: node head
+ * Return: ptr to rev node
  */
 listint_t *reverse_listint(listint_t **head)
 {
-	listint_t *ptr;
-	listint_t *indx;
+	listint_t *p;
+	listint_t *ndx;
 
-	ptr = NULL;
-	indx = NULL;
+	p = NULL;
+	ndx = NULL;
 
 	while (*head != NULL)
 	{
-		indx = (*head)->next;
-		(*head)->next = ptr;
-		ptr = *head;
-		*head = indx;
+		ndx = (*head)->next;
+		(*head)->next = p;
+		p = *head;
+		*head = ndx;
 	}
 
-	*head = ptr;
+	*head = p;
 	return (*head);
 }

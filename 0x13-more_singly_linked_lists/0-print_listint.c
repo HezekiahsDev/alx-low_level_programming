@@ -1,21 +1,20 @@
 #include "lists.h"
 
 /**
- * print_listint - print list members
- * @h: begining of list (head of node)
- *
- * Return: count of node
+ * print_listint - print list
+ * @h: head
+ * Return: node count
  */
 size_t print_listint(const listint_t *h)
 {
-	const listint_t *flag = h;
-	size_t index = 0;
+	const listint_t *ndx = h;
+	size_t cnt = 0;
 
-	while (flag != NULL)
+	while (ndx != NULL)
 	{
-		printf("%d\n", flag->n);
-		index += 1;
-		index = flag->next;
+		printf("%d\n", ndx->n);
+		cn5 += 1;
+		cursor = ndx->next;
 	}
-	return (index);
+	return (cnt);
 }

@@ -1,22 +1,21 @@
 #include "lists.h"
 /**
- * pop_listint - remove head node of SL list
- * @head : pointer to head node
- * Return: data of head node
- * or 0 on error (SL list is empty)
+ * pop_listint - delete a node
+ * @head : node head
+ * Return: result
  */
 int pop_listint(listint_t **head)
 {
-listint_t *tmp;
-int indx;
+listint_t *tmpt;
+int ndx;
 
-tmp = *head;
+tmpt = *head;
 
-if (tmp == NULL)
+if (tmpt == NULL)
 return (0);
 
-*head = tmp->next;
-indx = temp->indx;
-free(tmp);
-return (indx);
+*head = tmpt->next;
+n = tmpt->n;
+free(tmpt);
+return (ndx);
 }
