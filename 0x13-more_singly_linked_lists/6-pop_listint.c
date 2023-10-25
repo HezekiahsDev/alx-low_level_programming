@@ -15,7 +15,7 @@ if (tmpt == NULL)
 return (0);
 
 *head = tmpt->next;
-n = tmpt->n;
+ndx = tmpt->n;
 free(tmpt);
 return (ndx);
 }
