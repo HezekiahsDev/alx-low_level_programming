@@ -9,18 +9,6 @@
  *
  * Return: 1 if the operation was successful, -1 if the index is out of range.
  */
-/*int clear_bit(unsigned long int *n, unsigned int index)
-{
-    if (index > 63)
-        return (-1);
-
-    unsigned long int m = 1UL << index;
-
-    if (*n & m)
-        *n ^= m;
-
-    return (1);
-}*/
 int clear_bit(unsigned long int *n, unsigned int index)
 {
 	unsigned int val;
