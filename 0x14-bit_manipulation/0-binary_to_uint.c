@@ -4,11 +4,11 @@
  * binary_to_uint - converts a binary number to an unsigned int
  * @b: a string of '0' and '1' characters
  *
- * Description:
+ * Description
  * This function converts a binary string to an unsigned integer.
  * The binary string should consist of '0' and '1' characters only.
  *
- * @b: The binary string to be converted.
+ * b>>>The binary string to be converted
  *
  * Return: The converted unsigned integer.
  * If there are non-binary characters in the string or if b is NULL, returns 0.
