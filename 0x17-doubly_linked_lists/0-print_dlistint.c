@@ -1,4 +1,4 @@
-#inlcude "lists.h"
+#include "lists.h"
 
 /**
  * print_dlistint - print list of elements in a DLL
