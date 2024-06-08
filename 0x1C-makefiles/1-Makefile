@@ -1,0 +1,12 @@
+# Make files with variables
+
+CC = gcc
+SRC = main.c school.c
+
+all: ${SRC}
+	${CC} ${SRC} -o school# Make files with variab
+	CC = gcc
+	SRC = main.c scho
+
+all: ${SRC}
+	${CC} ${SRC} -o school
